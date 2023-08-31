@@ -11,12 +11,8 @@ Don't forget the space after the closing parentheses!
 // Мое решение
 package main
 
-import (
-	"strconv"
-)
+import "fmt"
 
-func CreatePhoneNumber(numbers [10]uint) string {
-	return "(" + strconv.Itoa(int(numbers[0])) + strconv.Itoa(int(numbers[1])) + strconv.Itoa(int(numbers[2])) + ") " +
-		strconv.Itoa(int(numbers[3])) + strconv.Itoa(int(numbers[4])) + strconv.Itoa(int(numbers[5])) + "-" +
-		strconv.Itoa(int(numbers[6])) + strconv.Itoa(int(numbers[7])) + strconv.Itoa(int(numbers[8])) + strconv.Itoa(int(numbers[9]))
+func CreatePhoneNumber(strings [10]uint) string {
+	return fmt.Sprintf("(%d%d%d) %d%d%d-%d%d%d%d", strings[0], strings[1], strings[2], strings[3], strings[4], strings[5], strings[6], strings[7], strings[8], strings[9])
 }
